@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div>
+    <div class="grid grid-cols-4 gap-4">
       <div v-for="character in characters" :key="character.id">
         <CardCharacter :character="character" />
       </div>

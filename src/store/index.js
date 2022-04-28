@@ -4,6 +4,7 @@ export default createStore({
   state: {
     characters: [],
     charactersFilter: [],
+    menuColor: "",
   },
   getters: {},
   mutations: {
@@ -12,6 +13,9 @@ export default createStore({
     },
     setCharactersFilter(state, payload) {
       state.charactersFilter = payload;
+    },
+    setMenuColor(state, payload) {
+      state.menuColor = payload;
     },
   },
   actions: {
@@ -43,6 +47,12 @@ export default createStore({
         }
       });
       commit("setCharactersFilter", res);
+    },
+
+    changeMenuColor({ commit }, color) {
+      const res = color;
+      console.log(res);
+      commit("setMenuColor", res);
     },
   },
   modules: {},
